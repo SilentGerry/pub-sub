@@ -3,6 +3,10 @@ var express = require('express');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var jwt = require('jsonwebtoken');
+var projectId = process.env.tutorial2-1470427656482;
+var gcloud = require('gcloud')({
+	projectId: projectId
+});
 
 var app = express();
 var server = http.createServer(app);

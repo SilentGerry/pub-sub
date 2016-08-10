@@ -1,5 +1,5 @@
 module.exports = function() {
-	// var gcloud = requir('gcloud')({projectId: 'tutorial2-1470427656482'});
+	var gcloud = require('gcloud')({projectId: 'tutorial2-1470427656482'});
 	
 	return {
 		fail: function(req, res) {
@@ -9,6 +9,7 @@ module.exports = function() {
 		},
 		post: function(req, res) {
 			console.log('Incoming post request...');
+			console.log(req);
 			res.json({success: true, message:'Its working...'});
 			return res.end();
 		}
