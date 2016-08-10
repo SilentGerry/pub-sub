@@ -21,7 +21,7 @@ app.get('/', function(req, res) {
 	res.json({message: 'Alright, alright...'});
 	res.end();
 });
-var port = '3000';
+var port = '8080';
 server.listen(port, function() {
     console.log('Listening on port: ' + port);
 });
