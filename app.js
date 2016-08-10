@@ -6,6 +6,17 @@ var jwt = require('jsonwebtoken');
 
 var app = express();
 var server = http.createServer(app);
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(cookieParser());
+
+app.use('/api/schedule', require('./sub.route')());
+app.get('/', function(req, res) {
+	console.log('Fuck yoooouuuuu!!!!!!');
+	res.json({message: 'Alright, alright...'});
+	res.end();
+});
 var port = '3000';
 server.listen(port, function() {
     console.log('Listening on port: ' + port);
