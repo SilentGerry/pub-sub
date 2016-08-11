@@ -33,7 +33,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/api/schedule', require('./sub.route')(firebase));
+app.use('/api/messages', require('./sub.route')(firebase));
 app.get('/', function(req, res) {
     console.log('Fuck yoooouuuuu!!!!!!');
     ref.on('value', function(snapshot) {
