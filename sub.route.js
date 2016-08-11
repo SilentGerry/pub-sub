@@ -7,7 +7,7 @@ module.exports = function(firebase) {
     console.log(middleware.post);
     router.route('/')
         .put(middleware.fail)
-        .get(middleware.fail)
+        .get(middleware.get)
         .delete(middleware.fail)
         .post(middleware.post);
     return router;
