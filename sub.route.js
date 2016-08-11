@@ -1,6 +1,6 @@
-module.exports = function() {
+module.exports = function(firebase) {
     var router = require('express').Router();
-    var middleware = require('./sub/sub.middleware')();
+    var middleware = require('./sub/sub.middleware')(firebase);
 
     console.log(middleware);
     console.log(middleware.fail);
