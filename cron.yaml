@@ -1,0 +1,4 @@
+cron:
+- description: endpoint test
+  url: /api/messages
+  schedule: every 2 minutes
